@@ -10,12 +10,13 @@ function addTask() {
         const listItem = document.createElement("li");
         const taskText = document.createElement("span");
         taskText.textContent = taskInput.value;
-        taskText.addEventListener("click", toggleTask);
 
         const checkButton = document.createElement("button");
-        checkButton.textContent = "✅";
+        checkButton.textContent = "Ceklis";
         checkButton.classList.add("check");
-        checkButton.addEventListener("click", toggleTask);
+        checkButton.addEventListener("click", () => {
+            toggleTask(taskText);
+        });
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
@@ -32,8 +33,7 @@ function addTask() {
     }
 }
 
-function toggleTask(event) {
-    const taskText = event.target.parentElement.querySelector("span");
+function toggleTask(taskText) {
     taskText.classList.toggle("completed");
     saveTasks();
 }
@@ -67,12 +67,13 @@ function loadTasks() {
         if (task.completed) {
             taskText.classList.add("completed");
         }
-        taskText.addEventListener("click", toggleTask);
 
         const checkButton = document.createElement("button");
-        checkButton.textContent = "✅";
+        checkButton.textContent = "Ceklis";
         checkButton.classList.add("check");
-        checkButton.addEventListener("click", toggleTask);
+        checkButton.addEventListener("click", () => {
+            toggleTask(taskText);
+        });
 
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
