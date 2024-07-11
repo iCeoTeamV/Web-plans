@@ -4,16 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Plan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Website Plan</h1>
-    <ul id="task-list">
-        <!-- Task items will be added here dynamically -->
-    </ul>
-    <input type="text" id="new-task" placeholder="Add a new task">
-    <button onclick="addTask()">Add Task</button>
-
+    <header>
+        <h1>Website Plan</h1>
+    </header>
+    <main>
+        <ul id="task-list">
+            <!-- Task items will be added here dynamically -->
+        </ul>
+        <div class="task-input">
+            <input type="text" id="new-task" placeholder="Add a new task">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
