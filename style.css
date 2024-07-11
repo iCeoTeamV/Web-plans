@@ -34,10 +34,12 @@ main {
     padding: 0.5rem;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#task-list li.completed {
+#task-list li.completed span {
     text-decoration: line-through;
     color: gray;
 }
@@ -62,6 +64,15 @@ main {
     color: white;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
+}
+
+button.delete {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 footer {
