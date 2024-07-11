@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Plan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Task List</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Website Plan</h1>
-    </header>
-    <main>
-        <ul id="task-list">
-            <!-- Task items will be added here dynamically -->
-        </ul>
-        <div class="task-input">
-            <input type="text" id="new-task" placeholder="Add a new task">
-            <button onclick="addTask()">Add Task</button>
-        </div>
-    </main>
-    <footer>
+    <div class="container">
+        <input type="text" id="new-task" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="task-list"></ul>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
         <p>&copy; 2024 my plan 乌拜</p>
     </footer>
     <script src="script.js"></script>
