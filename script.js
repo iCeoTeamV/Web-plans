@@ -12,12 +12,18 @@ function addTask() {
         taskText.textContent = taskInput.value;
         taskText.addEventListener("click", toggleTask);
 
+        const checkButton = document.createElement("button");
+        checkButton.textContent = "✅";
+        checkButton.classList.add("check");
+        checkButton.addEventListener("click", toggleTask);
+
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete");
         deleteButton.addEventListener("click", deleteTask);
 
         listItem.appendChild(taskText);
+        listItem.appendChild(checkButton);
         listItem.appendChild(deleteButton);
         taskList.appendChild(listItem);
         saveTasks();
@@ -27,7 +33,7 @@ function addTask() {
 }
 
 function toggleTask(event) {
-    const taskText = event.target;
+    const taskText = event.target.parentElement.querySelector("span");
     taskText.classList.toggle("completed");
     saveTasks();
 }
@@ -63,12 +69,18 @@ function loadTasks() {
         }
         taskText.addEventListener("click", toggleTask);
 
+        const checkButton = document.createElement("button");
+        checkButton.textContent = "✅";
+        checkButton.classList.add("check");
+        checkButton.addEventListener("click", toggleTask);
+
         const deleteButton = document.createElement("button");
         deleteButton.textContent = "Delete";
         deleteButton.classList.add("delete");
         deleteButton.addEventListener("click", deleteTask);
 
         listItem.appendChild(taskText);
+        listItem.appendChild(checkButton);
         listItem.appendChild(deleteButton);
         taskList.appendChild(listItem);
     });
